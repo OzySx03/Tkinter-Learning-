@@ -1,0 +1,15 @@
+from tkinter import *
+root = Tk()
+image = PhotoImage(file="img.png")
+root.resizable(width=False, height=False)
+root.geometry("800x1000")
+def login():
+    log=Label(root, text="you successfully logged in").place(x=250, y=700)
+root.configure(bg="lightblue")
+img=Label(root, image=image).place(x=50 , y=50)
+l=Label(root, text="enter your username", bg="lightblue", font=("arial",25)).place(x=50 , y=500)
+l1=Label(root, text="enter your password", bg="lightblue", font=("arial",25)).place(x=50 , y=600)
+e=Entry(root, font=("arial",25) ).place(x=400, y=500)
+e1=Entry(root, show="*", font=("arial",25)).place(x=400, y=600)
+b=Button(root, text="Click me", command= login, fg="black", bg="blue", activebackground="yellow", activeforeground="white", font=("arial",25)).place(x=250, y=650)
+root.mainloop()
